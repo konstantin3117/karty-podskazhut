@@ -20,3 +20,56 @@ li,
 figure {
   margin: 0;
 }
+
+a {
+  color: inherit;
+}
+
+:root {
+  --bg-color: #F3EFEC;
+  --text-color: #312A4E;
+  --accent-color: #FFAB6B;
+  --main-font: 'Raleway';
+  --accent-font: 'STIX Two Text';
+}
+
+.page {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.header {
+  padding-top: 10%;
+}
+
+.heading {
+  font-family: 'STIX Two Text';
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 90%;
+  text-align: center;
+}
+
+.content-section {
+  padding-left: 5vi;
+  padding-right: 5vi;
+}
+
+.header__title {
+  font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
+  padding-bottom: 40px;
+}
+
+.content__title {
+  font-size: 30px;
+  padding-top: 7%;
+  padding-bottom: 2.5%;
+}
+
+.content__text-block {
+  font-size: 18px;
+}
+
+.content__text-block > .content__paragraph:not(:last-child) {
+  padding-bottom: 1.5em;
+}
