@@ -73,3 +73,55 @@ a {
 .content__text-block > .content__paragraph:not(:last-child) {
   padding-bottom: 1.5em;
 }
+
+.content__blockquote {
+  font-style: italic;
+  line-height: 200%;
+  width: 75%;
+  padding-bottom: 1.5em;
+  margin: 0 auto;
+}
+
+.content__list {
+  list-style: none;
+  position: relative;
+  font-family: 'Raleway';
+}
+
+li:not(:last-child) {
+  padding-bottom: 10px;
+}
+
+li::before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-image: url(/images/marker-light.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  left: 15px;
+}
+
+.content__text-block_type_first-lettered:first-letter {
+  background-color: var(--accent-color);
+  padding: 0 4px;
+  margin-right: 1px;
+  font-family: 'Raleway';
+  font-weight: 700;
+}
+
+.content__text-block_type_first-lettered::first-line {
+  display: inline-block;
+}
+
+.content__picture {
+  width: 100%;
+}
+
+.content__figure {
+  padding-top: 7%;
+  padding-bottom: 7%;
+}
