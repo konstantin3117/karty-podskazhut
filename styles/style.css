@@ -124,4 +124,48 @@ li::before {
 .content__figure {
   padding-top: 7%;
   padding-bottom: 7%;
+  width: calc(100% + 10vi);
+  right: 5vi;
+  position: relative;
+}
+
+.content__picture-caption {
+  font-family: 'Raleway';
+  text-align: center;
+  border-bottom: 1px solid #312A4E;
+  padding: 20px 0;
+}
+
+.content__card {
+  aspect-ratio: 4 / 3;
+  margin-top: 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid currentColor;
+}
+
+.content__card-title {
+  font-size: 60px;
+}
+
+.content__card-subtitle {
+  font-size: 18px;
+}
+
+.colored-text {
+  position: relative;
+}
+
+.colored-text::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  width: 3.66em;
+  height: 0.25em;
+  background-color: var(--accent-color, #FFAB6B);
+  z-index: -1;
+  left: calc(50% - 1.82em);
+  top: calc(50% + 0.05em);
 }
