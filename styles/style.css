@@ -88,11 +88,11 @@ a {
   font-family: 'Raleway';
 }
 
-li:not(:last-child) {
+.content__item:not(:last-child) {
   padding-bottom: 10px;
 }
 
-li::before {
+.content__item::before {
   content: '';
   display: inline-block;
   width: 15px;
@@ -168,4 +168,56 @@ li::before {
   z-index: -1;
   left: calc(50% - 1.82em);
   top: calc(50% + 0.05em);
+}
+
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #312A4E;
+  border-bottom: 1px solid #312A4E;
+}
+
+.header__logo {
+  padding: 20px 0;
+}
+
+.header__theme-toggler {
+  display: flex;
+  list-style: none;
+  padding: 26px 0;
+  gap: 20px;
+}
+
+.header__theme-button {
+  font-family: 'Raleway'; /**Зачем inherit, если здесь другой шрифт? */
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 18px;
+  border: none;
+}
+
+.header__theme-button:hover:not(.header__theme-button_is-active) {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  font-weight: 700;
+}
+
+.header__item {
+  position: relative;
+}
+
+.header__theme-button_is-active {
+  font-weight: 700;
+}
+
+.header__theme-button_is-active::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  width: 4.5em;
+  height: 0.4em;
+  background-color: var(--accent-color, #FFAB6B);
+  z-index: -1;
+  top: 0.6em;
+  right: 0.1em;
 }
