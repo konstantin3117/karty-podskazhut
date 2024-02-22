@@ -247,3 +247,42 @@ a, button:focus-visible {
 .footer__copyright {
   font-size: 18px;
 }
+
+
+.theme_dark {
+  --bg-color: #171717;
+  --text-color: #b3b3b3;
+  --accent-color: transparent;
+}
+
+.theme_dark .content__list-item::before {
+  background-image: url("/images/marker-dark.svg");
+}
+
+.theme_dark
+  .content__text-block_type_first-lettered
+  .content__paragraph:first-child::first-letter {
+  background-color: transparent;
+  border: 1px solid var(--text-color);
+}
+
+.theme_dark .content__picture-caption {
+  border-bottom: 1px solid var(--text-color);
+}
+
+.theme_dark .colored-text::after {
+  background-image: url(/images/pattern.svg);
+}
+
+.theme_dark .header__theme-button_is-active::after {
+  background-image: url(/images/pattern.svg);
+  width: 4em;
+}
+
+.theme_dark .colored-text::after {
+  background-image: url(/images/pattern.svg);
+}
+
+.theme_dark .content__list-item::before {
+  background-image: url("/images/marker-dark.svg");
+}
