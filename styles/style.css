@@ -23,6 +23,7 @@ figure {
 
 a {
   color: inherit;
+
 }
 
 :root {
@@ -220,4 +221,16 @@ a {
   z-index: -1;
   top: 0.6em;
   right: 0.1em;
+}
+
+a, button:focus {
+  outline: none;
+}
+
+a, button:focus-visible {
+  outline: 1px solid var(--text-color);
+}
+
+.header__theme-button:disabled {
+  pointer-events: none;
 }
