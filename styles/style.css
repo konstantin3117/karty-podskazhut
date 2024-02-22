@@ -23,7 +23,6 @@ figure {
 
 a {
   color: inherit;
-
 }
 
 :root {
@@ -44,7 +43,7 @@ a {
 }
 
 .heading {
-  font-family: 'STIX Two Text';
+  font-family: var( --accent-font);
   font-weight: 600;
   letter-spacing: 0;
   line-height: 90%;
@@ -68,6 +67,10 @@ a {
 }
 
 .content__text-block {
+  font-family: var(--main-font);
+}
+
+.content__text-block {
   font-size: 18px;
 }
 
@@ -86,7 +89,7 @@ a {
 .content__list {
   list-style: none;
   position: relative;
-  font-family: 'Raleway';
+  font-family: var(--main-font);
 }
 
 .content__item:not(:last-child) {
@@ -110,7 +113,7 @@ a {
   background-color: var(--accent-color);
   padding: 0 4px;
   margin-right: 1px;
-  font-family: 'Raleway';
+  font-family: var(--main-font);
   font-weight: 700;
 }
 
@@ -131,7 +134,7 @@ a {
 }
 
 .content__picture-caption {
-  font-family: 'Raleway';
+  font-family: var(--main-font);
   text-align: center;
   border-bottom: 1px solid #312A4E;
   padding: 20px 0;
@@ -190,7 +193,7 @@ a {
 }
 
 .header__theme-button {
-  font-family: 'Raleway'; /**Зачем inherit, если здесь другой шрифт? */
+  font-family: var(--main-font); /**Зачем inherit, если здесь другой шрифт? */
   color: var(--text-color);
   cursor: pointer;
   font-size: 18px;
@@ -227,8 +230,15 @@ a, button:focus {
   outline: none;
 }
 
-a, button:focus-visible {
+a:not(.header__link-logo):focus-visible, button:focus-visible {
   outline: 1px solid var(--text-color);
+  outline-offset: 1px;
+}
+
+a:hover {
+  text-decoration: none;
+  text-decoration: underline 1px var(--text-color);
+  text-underline-offset: 1px;
 }
 
 .header__theme-button:disabled {
@@ -248,14 +258,13 @@ a, button:focus-visible {
   font-size: 18px;
 }
 
-
 .theme_dark {
   --bg-color: #171717;
   --text-color: #b3b3b3;
   --accent-color: transparent;
 }
 
-.theme_dark .content__list-item::before {
+.theme_dark .content__item::before {
   background-image: url("/images/marker-dark.svg");
 }
 
@@ -264,6 +273,9 @@ a, button:focus-visible {
   .content__paragraph:first-child::first-letter {
   background-color: transparent;
   border: 1px solid var(--text-color);
+  padding: 2px;
+  font-weight: 700;
+  margin-right: 4px;
 }
 
 .theme_dark .content__picture-caption {
@@ -277,6 +289,7 @@ a, button:focus-visible {
 .theme_dark .header__theme-button_is-active::after {
   background-image: url(/images/pattern.svg);
   width: 4em;
+  z-index: 2;
 }
 
 .theme_dark .colored-text::after {
@@ -285,4 +298,8 @@ a, button:focus-visible {
 
 .theme_dark .content__list-item::before {
   background-image: url("/images/marker-dark.svg");
+}
+
+.theme_dark .header__theme-button {
+  background-color: #171717;
 }
