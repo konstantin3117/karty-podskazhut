@@ -234,3 +234,16 @@ a, button:focus-visible {
 .header__theme-button:disabled {
   pointer-events: none;
 }
+
+.footer {
+  border-top: 1px solid var(--text-color);
+  color: var(--text-color);
+  text-align: center;
+  font-family: var(--main-font);
+  margin-top: 10%;
+  padding: 2.5%;
+}
+
+.footer__copyright {
+  font-size: 18px;
+}
