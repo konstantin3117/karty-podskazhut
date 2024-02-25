@@ -7,8 +7,6 @@
 .page {
   min-inline-size: 360px;
   margin: 0;
-  background-color: var(--bg-color), #F3EFEC;
-  color: var(--text-color), #312A4E;
 }
 
 p,
@@ -35,12 +33,17 @@ a {
   --accent-font: 'STIX Two Text';
 }
 
+.page {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
 .header {
   padding-top: 10%;
 }
 
 .heading {
-  font-family: var( --accent-font), 'STIX Two Text', Arial, Helvetica, sans-serif;
+  font-family: var( --accent-font);
   font-weight: 600;
   letter-spacing: 0;
   line-height: 90%;
@@ -59,17 +62,16 @@ a {
 
 .content__title {
   font-size: 30px;
-  padding-top: 6.6%;
-  padding-bottom: 4%;
+  padding-top: 7%;
+  padding-bottom: 2.5%;
 }
 
 .content__text-block {
-  font-family: var(--main-font), 'Raleway', Arial, Helvetica, sans-serif;
+  font-family: var(--main-font);
 }
 
 .content__text-block {
   font-size: 18px;
-  padding-bottom: 0.3%;
 }
 
 .content__text-block > .content__paragraph:not(:last-child) {
@@ -87,7 +89,7 @@ a {
 .content__list {
   list-style: none;
   position: relative;
-  font-family: var(--main-font), 'Raleway', Arial, Helvetica, sans-serif;
+  font-family: var(--main-font);
 }
 
 .content__item:not(:last-child) {
@@ -108,10 +110,10 @@ a {
 }
 
 .content__text-block_type_first-lettered:first-letter {
-  background-color: var(--accent-color, #FFAB6B);
+  background-color: var(--accent-color);
   padding: 0 4px;
   margin-right: 1px;
-  font-family: var(--main-font), 'Raleway', Arial, Helvetica, sans-serif;
+  font-family: var(--main-font);
   font-weight: 700;
 }
 
@@ -124,7 +126,7 @@ a {
 }
 
 .content__figure {
-  padding-top: 4.5%;
+  padding-top: 7%;
   padding-bottom: 7%;
   width: calc(100% + 10vi);
   right: 5vi;
@@ -132,7 +134,7 @@ a {
 }
 
 .content__picture-caption {
-  font-family: var(--main-font), 'Raleway', Arial, Helvetica, sans-serif;
+  font-family: var(--main-font);
   text-align: center;
   border-bottom: 1px solid #312A4E;
   padding: 20px 0;
@@ -186,18 +188,16 @@ a {
 .header__theme-toggler {
   display: flex;
   list-style: none;
-  padding: 25px 0;
-  gap: 5px;
-  font-weight: 400;
+  padding: 26px 0;
+  gap: 20px;
 }
 
 .header__theme-button {
-  font-family: var(--main-font), 'Raleway', Arial, Helvetica, sans-serif; /**Зачем inherit, если здесь другой шрифт? */
-  color: var(--text-color, #312A4E);
+  font-family: var(--main-font); /**Зачем inherit, если здесь другой шрифт? */
+  color: var(--text-color);
   cursor: pointer;
   font-size: 18px;
   border: none;
-  background-color: var(--bg-color), #F3EFEC;
 }
 
 .header__theme-button:hover:not(.header__theme-button_is-active) {
@@ -231,13 +231,13 @@ a, button:focus {
 }
 
 a:not(.header__link-logo):focus-visible, button:focus-visible {
-  outline: 1px solid var(--text-color, #312A4E);
+  outline: 1px solid var(--text-color);
   outline-offset: 1px;
 }
 
 a:hover {
   text-decoration: none;
-  text-decoration: underline 1px var(--text-color, #312A4E);
+  text-decoration: underline 1px var(--text-color);
   text-underline-offset: 1px;
 }
 
@@ -246,10 +246,10 @@ a:hover {
 }
 
 .footer {
-  border-top: 1px solid var(--text-color, #312A4E);
-  color: var(--text-color, #312A4E);
+  border-top: 1px solid var(--text-color);
+  color: var(--text-color);
   text-align: center;
-  font-family: var(--main-font), 'Raleway', Arial, Helvetica, sans-serif;
+  font-family: var(--main-font);
   margin-top: 10%;
   padding: 2.5%;
 }
@@ -272,14 +272,14 @@ a:hover {
   .content__text-block_type_first-lettered
   .content__paragraph:first-child::first-letter {
   background-color: transparent;
-  border: 1px solid var(--text-color, #b3b3b3);
+  border: 1px solid var(--text-color);
   padding: 2px;
   font-weight: 700;
   margin-right: 4px;
 }
 
 .theme_dark .content__picture-caption {
-  border-bottom: 1px solid var(--text-color, #b3b3b3);
+  border-bottom: 1px solid var(--text-color);
 }
 
 .theme_dark .colored-text::after {
