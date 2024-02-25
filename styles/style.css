@@ -185,8 +185,7 @@ a {
 .header__theme-toggler {
   display: flex;
   list-style: none;
-  padding: 26px 0;
-  gap: 7px;
+  gap: 10px;
   font-weight: 400;
 }
 
